@@ -1,0 +1,18 @@
+.navigation {
+    background-color: bisque;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+.li{
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
