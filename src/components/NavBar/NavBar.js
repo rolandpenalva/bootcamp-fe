@@ -6,7 +6,9 @@ const NavBar = (props) => {
   const listItems = options.map((node) => {
     return (
       <li className="li" key={node.id.toString()}>
-        <Link to={node.url}>{node.menu}</Link>
+        <Link className="link" to={node.url}>
+          {node.menu}
+        </Link>
       </li>
     );
   });
