@@ -27,5 +27,27 @@ const options = [
     url: "/product",
     protected: false,
   },
+  {
+    id: 5,
+    name: "admin",
+    menu: "Admin",
+    url: "/admin",
+    protected: false,
+    sub: [
+      {
+        id: 5.1,
+        name: "user",
+        menu: "Users",
+        url: "/users",
+        protected: false,
+      },{
+        id: 5.2,
+        name: "catalog",
+        menu: "Catalogs",
+        url: "/catalog",
+        protected: false,
+      }
+    ]
+  }
 ];
 export default options;
