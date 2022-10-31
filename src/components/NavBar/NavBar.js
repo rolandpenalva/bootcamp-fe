@@ -1,46 +1,37 @@
 import options from "./options";
 import { Link } from "react-router-dom";
-import "./NavBar.css";
+import "./NavBar2.css";
 
-function createMenuBar (options, ulClass, liClass, linkClass){
-  let items = options.map((node)=>{
-
-      if(node.sub && node.sub.length > 0){
-        return(
-        <li className="li" key={node.id.toString()}>
-          <Link className="link" to="#">
-          {node.menu}
-          </Link>
-          {createMenuBar(node.sub, ulClass,liClass)}
-        </li>)   
-      }else{
-        return(
-        <li className="li" key={node.id.toString()}>
-          <Link className="link" to={node.url}>
-            {node.menu}
-          </Link>
-        </li>)
-      }
+function createMenuBar(options, ulClass) {
+  let items = options.map((node) => {
+    if (node.sub && node.sub.length > 0) {
+      return (
+        <li key={node.id.toString()}>
+          <Link to="#">{node.menu}</Link>
+          {createMenuBar(node.sub, "subClass")}
+        </li>
+      );
+    } else {
+      return (
+        <li key={node.id.toString()}>
+          <Link to={node.url}>{node.menu}</Link>
+        </li>
+      );
+    }
   });
 
-  return <ul className={ulClass}>{items}</ul>
+  // return items;
+  return <ul className={ulClass}>{items}</ul>;
 }
 
 const NavBar = (props) => {
-  const result = createMenuBar(options,"navigation","li","link");
-
-  console.log(result);
-  // const listItems = options.map((node) => {
-  //   return (
-  //     <li className="li" key={node.id.toString()}>
-  //       <Link className="link" to={node.url}>
-  //         {node.menu}
-  //       </Link>
-  //     </li>
-  //   );
-  // });
-  // return <ul className="navigation">{listItems}</ul>;
-  return result;
+  let isLogIn = true;
+  if (isLogIn) {
+    const result = createMenuBar(options, "navBar");
+    return result;
+  } else {
+    return <></>;
+  }
 };
 
 export default NavBar;

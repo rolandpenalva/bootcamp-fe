@@ -1,0 +1,35 @@
+.navBar{
+    background-color: darkgray;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+}
+.navBar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navBar li {
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    color:white;
+    position: relative;
+}
+
+.navBar a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.navBar a:hover {
+    color: aquamarine;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}

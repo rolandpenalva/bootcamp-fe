@@ -7,13 +7,6 @@ const options = [
     protected: false,
   },
   {
-    id: 2,
-    name: "about",
-    menu: "About",
-    url: "/about",
-    protected: false,
-  },
-  {
     id: 3,
     name: "transfer",
     menu: "Transfer",
@@ -33,21 +26,42 @@ const options = [
     menu: "Admin",
     url: "/admin",
     protected: false,
-    sub: [
-      {
-        id: 5.1,
-        name: "user",
-        menu: "Users",
-        url: "/users",
-        protected: false,
-      },{
-        id: 5.2,
-        name: "catalog",
-        menu: "Catalogs",
-        url: "/catalog",
-        protected: false,
-      }
-    ]
-  }
+    // sub: [
+    //   {
+    //     id: 5.1,
+    //     name: "user",
+    //     menu: "Users",
+    //     url: "/users",
+    //     protected: false,
+    //   },{
+    //     id: 5.2,
+    //     name: "catalog",
+    //     menu: "Catalogs",
+    //     url: "/catalog",
+    //     protected: false,
+    //   }
+    // ]
+  },
+  {
+    id: 2,
+    name: "about",
+    menu: "About",
+    url: "/about",
+    protected: false,
+  },
+  {
+    id: 6,
+    name: "logout",
+    menu: "Logout",
+    url: "/logout",
+    protected: false,
+  },
+  {
+    id: 7,
+    name: "login",
+    menu: "Login",
+    url: "/login",
+    protected: false,
+  },
 ];
 export default options;
