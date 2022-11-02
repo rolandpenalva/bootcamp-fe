@@ -63,5 +63,12 @@ const options = [
     url: "/login",
     protected: false,
   },
+  {
+    id: 8,
+    name: "signin",
+    menu: "SignIn",
+    url: "/signin",
+    protected: false,
+  },
 ];
 export default options;

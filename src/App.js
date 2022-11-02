@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Product from "./components/Product";
 import Admin from "./components/Admin";
 import Login from "./components/login/Login";
+import SignIn from "./components/SignIn/SignIn";
 import Logout from "./components/logout/Logout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/product" element={<Product />} />
           <Route exact path="/admin" element={<Admin />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signin" element={<SignIn />} />
           <Route exact path="/logout" element={<Logout />} />
         </Routes>
       </Router>
